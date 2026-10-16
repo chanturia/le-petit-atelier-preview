@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e4f3f7" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="Le Petit Atelier στην Παλλήνη. Φροντίδα και περιποίηση για σκύλους και γάτες. Προεπισκόπηση της νέας ιστοσελίδας."
+    />
+    <title>Le Petit Atelier · Φροντίδα με αγάπη, στην Παλλήνη</title>
+    <link rel="icon" href="assets/images/logo.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script type="module" src="assets/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+    <svg
+      class="svg-definitions"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M4 12h15m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path
+          d="m8 3 3 5-3 3c1.4 2.5 2.5 3.6 5 5l3-3 5 3c-1 5-4 6-8 4C7 17 3 13 3 7c0-2 2-4 5-4Z"
+        />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="3" />
+        <path d="M7 2v6m10-6v6M3 11h18m-13 5 3 3 5-5" />
+      </symbol>
+      <symbol id="i-paw" viewBox="0 0 64 64">
+        <path
+          fill="currentColor"
+          stroke="none"
+          d="M18 40c5-6 7-15 14-15s9 9 14 15c11 13-1 19-8 15-4-3-8-3-12 0-7 4-19-2-8-15Z"
+        />
+        <g fill="currentColor" stroke="none">
+          <ellipse
+            cx="12"
+            cy="27"
+            rx="7"
+            ry="10"
+            transform="rotate(-25 12 27)"
+          />
+          <ellipse
+            cx="25"
+            cy="13"
+            rx="7"
+            ry="11"
+            transform="rotate(-10 25 13)"
+          />
+          <ellipse
+            cx="41"
+            cy="13"
+            rx="7"
+            ry="11"
+            transform="rotate(10 41 13)"
+          />
+          <ellipse
+            cx="54"
+            cy="27"
+            rx="7"
+            ry="10"
+            transform="rotate(25 54 27)"
+          />
+        </g>
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path d="M12 21S2 14 2 7c0-6 8-6 10-1 2-5 10-5 10 1 0 7-10 14-10 14Z" />
+      </symbol>
+      <symbol id="i-drop" viewBox="0 0 48 48">
+        <path d="M24 4S9 22 9 31a15 15 0 0 0 30 0C39 22 24 4 24 4Z" />
+        <path d="M17 29c-1 5 2 9 6 10" />
+      </symbol>
+      <symbol id="i-scissors" viewBox="0 0 48 48">
+        <circle cx="12" cy="36" r="7" />
+        <circle cx="36" cy="36" r="7" />
+        <path d="m17 31 20-26M31 31 11 5" />
+        <circle cx="24" cy="22" r="1" />
+      </symbol>
+      <symbol id="i-comb" viewBox="0 0 48 48">
+        <path
+          d="m6 39 29-29 7 7-29 29-7-7ZM15 30l-5-5m10 0-5-5m10 0-5-5m10 0-5-5m10 0-5-5"
+        />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Le Petit Atelier — Αρχική">
+          <img
+            src="assets/images/logo.jpg"
+            width="150"
+            height="150"
+            alt=""
+            class="brand-logo"
+          />
+          <span translate="no">Le Petit Atelier</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Άνοιγμα μενού"
+        >
+          <svg class="icon"><use href="#i-menu" /></svg>
+        </button>
+        <nav id="main-nav" aria-label="Κύρια πλοήγηση">
+          <a href="#care">Φροντίδα</a>
+          <a href="#atelier">Το atelier</a>
+          <a href="#appointment">Επικοινωνία</a>
+        </nav>
+        <a
+          class="header-phone"
+          href="tel:+302162026495"
+          aria-label="Καλέστε στο 216 202 6495"
+          ><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg
+          ><span>216 202 6495</span></a
+        >
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">Pet grooming <span>·</span> Παλλήνη</p>
+            <h1 id="hero-title">
+              Φροντίδα <br />με αγάπη.<br />Στυλ με <br />χαρακτήρα.
+            </h1>
+            <p class="hero-description">
+              Περιποίηση και καλλωπισμός<br class="desktop-break" />
+              για σκύλους και γάτες<br class="desktop-break" />
+              στην Παλλήνη.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#appointment"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-calendar" /></svg
+                >Ραντεβού online<svg class="icon arrow" aria-hidden="true">
+                  <use href="#i-arrow" /></svg
+              ></a>
+              <a class="button button-outline" href="#care"
+                >Βρείτε τη φροντίδα του</a
+              >
+            </div>
+            <p class="handwritten hero-note">
+              Τα κατοικίδιά μας<br />κάνουν τη ζωή πιο όμορφη!<svg
+                class="note-paw"
+                aria-hidden="true"
+              >
+                <use href="#i-paw" />
+              </svg>
+            </p>
+          </div>
+
+          <div class="hero-memories">
+            <figure class="polaroid main-polaroid">
+              <div class="hero-photo">
+                <img
+                  src="assets/images/dog-bandana.jpg"
+                  width="480"
+                  height="640"
+                  alt="Σκύλος με μπλε μπαντάνα στο τραπέζι περιποίησης του atelier"
+                  fetchpriority="high"
+                />
+              </div>
+              <figcaption>
+                Στιγμές στο atelier
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-heart" />
+                </svg>
+              </figcaption>
+            </figure>
+            <div class="small-memories">
+              <figure class="small-photo">
+                <img
+                  src="assets/images/dog-white.jpg"
+                  width="360"
+                  height="640"
+                  alt="Μικρό λευκό σκυλάκι μετά την περιποίηση"
+                />
+              </figure>
+              <figure class="small-photo">
+                <img
+                  src="assets/images/cat.jpg"
+                  width="480"
+                  height="640"
+                  alt="Λευκή και τιγρέ γάτα στο atelier"
+                />
+              </figure>
+            </div>
+          </div>
+
+          <aside class="hero-aside" aria-label="Βρείτε το Le Petit Atelier">
+            <div class="visit-card">
+              <svg class="location-icon" aria-hidden="true">
+                <use href="#i-pin" />
+              </svg>
+              <h2 translate="no">Le Petit Atelier</h2>
+              <address>Πατριάρχου Γρηγορίου Εʹ 3,<br />Παλλήνη 153 51</address>
+              <div class="visit-card-rule"></div>
+              <a class="visit-phone" href="tel:+302162026495"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-phone" /></svg
+                >216 202 6495</a
+              >
+              <a
+                class="button button-cream"
+                href="https://www.google.com/maps?cid=6950563779669836147"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg
+                >Πώς θα μας βρείτε</a
+              >
+              <div class="paw-divider">
+                <span></span><svg aria-hidden="true"><use href="#i-paw" /></svg
+                ><span></span>
+              </div>
+              <p>Γνωρίστε μας από κοντά.</p>
+            </div>
+            <p class="handwritten aside-note">
+              Ίδια αγάπη<br />για όλους
+              <svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>
+            </p>
+            <svg class="aside-paw" aria-hidden="true">
+              <use href="#i-paw" />
+            </svg>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        id="care"
+        class="care-section section-pad"
+        aria-labelledby="care-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Μικρές συνήθειες, πολλή φροντίδα</p>
+              <h2 id="care-title">
+                Η φροντίδα στο επίκεντρο<span class="coral-line"></span>
+              </h2>
+            </div>
+            <p class="handwritten section-note">
+              Κάθε κατοικίδιο είναι μοναδικό.<svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="#i-paw" />
+              </svg>
+            </p>
+          </div>
+          <p class="section-intro">
+            Βρείτε τη φροντίδα που ταιριάζει στον δικό σας μικρό φίλο.
+          </p>
+
+          <form
+            id="care-selector"
+            class="care-selector"
+            aria-label="Επιλογή φροντίδας κατοικιδίου"
+          >
+            <fieldset class="animal-options">
+              <legend class="sr-only">
+                Για ποιο κατοικίδιο ψάχνετε φροντίδα;
+              </legend>
+              <label class="animal-option"
+                ><input
+                  type="radio"
+                  name="care-animal"
+                  value="dog"
+                  checked /><img
+                  src="assets/images/dog-bow.jpg"
+                  width="480"
+                  height="640"
+                  alt=""
+                  loading="lazy" /><span
+                  ><small>Για τον καλύτερό σας φίλο</small
+                  ><strong>Φροντίδα σκύλου</strong></span
+                ><span class="selection-mark" aria-hidden="true"
+                  ><svg class="icon"><use href="#i-check" /></svg></span
+              ></label>
+              <label class="animal-option"
+                ><input type="radio" name="care-animal" value="cat" /><img
+                  src="assets/images/cat.jpg"
+                  width="480"
+                  height="640"
+                  alt=""
+                  loading="lazy" /><span
+                  ><small>Για τη μικρή σας προσωπικότητα</small
+                  ><strong>Φροντίδα γάτας</strong></span
+                ><span class="selection-mark" aria-hidden="true"
+                  ><svg class="icon"><use href="#i-check" /></svg></span
+              ></label>
+            </fieldset>
+            <div class="care-refinements">
+              <div class="field" id="care-size-field">
+                <label for="care-size">Μέγεθος</label
+                ><select id="care-size" name="size">
+                  <option value="unknown">Όλα τα μεγέθη</option>
+                  <option value="small">Μικρόσωμος</option>
+                  <option value="medium">Μεσαίος</option>
+                  <option value="large">Μεγαλόσωμος</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="care-coat">Τύπος τριχώματος</label
+                ><select id="care-coat" name="coat">
+                  <option value="unknown">Δεν γνωρίζω / Όλα</option>
+                  <option value="short">Κοντό τρίχωμα</option>
+                  <option value="long">Μακρύ τρίχωμα</option>
+                  <option value="curly">Σγουρό τρίχωμα</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="care-breed">Φυλή <span>(προαιρετικά)</span></label
+                ><input
+                  id="care-breed"
+                  name="breed"
+                  type="text"
+                  list="dog-breeds"
+                  maxlength="80"
+                  autocomplete="off"
+                  placeholder="π.χ. Ημίαιμο…"
+                />
+              </div>
+            </div>
+          </form>
+          <p id="care-context" class="care-context" aria-live="polite"></p>
+          <div
+            id="service-list"
+            class="services"
+            aria-label="Διαθέσιμες επιλογές φροντίδας"
+          ></div>
+          <noscript
+            ><p>
+              Για να επιλέξετε κατηγορία φροντίδας, ενεργοποιήστε τη JavaScript.
+              Μπορείτε πάντα να επικοινωνήσετε στο
+              <a href="tel:+302162026495">216 202 6495</a>.
+            </p></noscript
+          >
+          <p class="care-footnote">
+            Η κατάλληλη περιποίηση συμφωνείται μαζί σας, ανάλογα με το τρίχωμα
+            και τις ανάγκες του κατοικιδίου.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="atelier"
+        class="atelier-section section-pad"
+        aria-labelledby="atelier-title"
+      >
+        <div class="container">
+          <div class="atelier-intro">
+            <div>
+              <p class="eyebrow">Καλώς ήρθατε στο atelier</p>
+              <h2 id="atelier-title">
+                Μικροί επισκέπτες.<br />Μεγάλες προσωπικότητες.<span
+                  class="coral-line"
+                ></span>
+              </h2>
+            </div>
+            <div class="atelier-description">
+              <p>
+                Μια μουσούδα, μια κουνιστή ουρά, ένα ξεχωριστό βλέμμα. Στο Le
+                Petit Atelier, η περιποίηση ξεκινά γνωρίζοντας τον δικό σας
+                μικρό φίλο.
+              </p>
+              <a
+                class="text-link"
+                href="https://www.instagram.com/le_petit_atelier_pallini/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Περισσότερες στιγμές στο Instagram<svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="#i-arrow" /></svg
+              ></a>
+            </div>
+          </div>
+          <div class="gallery-toolbar">
+            <p class="handwritten">
+              Οι μικροί μας επισκέπτες
+              <svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>
+            </p>
+            <div
+              class="filter-buttons"
+              role="group"
+              aria-label="Φίλτρο φωτογραφιών"
+            >
+              <button
+                type="button"
+                data-gallery-filter="all"
+                aria-pressed="true"
+              >
+                Όλοι</button
+              ><button
+                type="button"
+                data-gallery-filter="dog"
+                aria-pressed="false"
+              >
+                Σκύλοι</button
+              ><button
+                type="button"
+                data-gallery-filter="cat"
+                aria-pressed="false"
+              >
+                Γάτες
+              </button>
+            </div>
+          </div>
+          <div class="gallery">
+            <figure class="gallery-item" data-animal="dog">
+              <img
+                src="assets/images/dog-bow.jpg"
+                width="480"
+                height="640"
+                alt="Λευκό σκυλάκι με πολύχρωμο παπιγιόν μετά το grooming"
+                loading="lazy"
+              />
+              <figcaption>Έτοιμος για βόλτα!</figcaption>
+            </figure>
+            <figure class="gallery-item" data-animal="cat">
+              <img
+                src="assets/images/cat.jpg"
+                width="480"
+                height="640"
+                alt="Η γάτα της παρέας στο τραπέζι περιποίησης"
+                loading="lazy"
+              />
+              <figcaption>Με τον δικό μου αέρα.</figcaption>
+            </figure>
+            <figure class="gallery-item" data-animal="dog">
+              <img
+                src="assets/images/dog-blue-eyes.jpg"
+                width="480"
+                height="640"
+                alt="Σκύλος με γαλάζια μάτια ξεκουράζεται στο atelier"
+                loading="lazy"
+              />
+              <figcaption>Ένα βλέμμα αρκεί.</figcaption>
+            </figure>
+            <figure class="gallery-item" data-animal="dog">
+              <img
+                src="assets/images/dog-white.jpg"
+                width="360"
+                height="640"
+                alt="Χαμογελαστό μικρό λευκό σκυλάκι με ροζ περιλαίμιο"
+                loading="lazy"
+              />
+              <figcaption>Μικρός, με πολύ στυλ.</figcaption>
+            </figure>
+          </div>
+          <p id="gallery-status" class="sr-only" aria-live="polite">
+            4 φωτογραφίες
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="appointment"
+        class="appointment-section section-pad"
+        aria-labelledby="appointment-title"
+      >
+        <div class="container appointment-layout">
+          <div class="appointment-copy">
+            <p class="eyebrow">Μια πρώτη γνωριμία</p>
+            <h2 id="appointment-title">
+              Η επόμενη στιγμή<br />φροντίδας ξεκινά εδώ.<span
+                class="coral-line"
+              ></span>
+            </h2>
+            <p>
+              Πείτε μας λίγα λόγια για το κατοικίδιό σας και τη φροντίδα που σας
+              ενδιαφέρει.
+            </p>
+            <ol class="appointment-steps">
+              <li><span>01</span>Επιλέγετε φροντίδα.</li>
+              <li><span>02</span>Μας λέτε πότε σας εξυπηρετεί.</li>
+              <li><span>03</span>Επικοινωνούμε για επιβεβαίωση.</li>
+            </ol>
+            <p class="appointment-explainer">
+              Η ημερομηνία είναι προτίμηση. Το ραντεβού οριστικοποιείται μετά
+              από επικοινωνία με το atelier.
+            </p>
+            <p class="handwritten appointment-note">
+              Ανυπομονούμε να γνωριστούμε!<svg class="icon" aria-hidden="true">
+                <use href="#i-paw" />
+              </svg>
+            </p>
+            <p class="contact-alternative">
+              Προτιμάτε το τηλέφωνο;<br /><a href="tel:+302162026495"
+                >216 202 6495</a
+              >
+            </p>
+          </div>
+          <form id="appointment-form" class="appointment-form" novalidate>
+            <fieldset id="demo-fields" class="form-shell" disabled>
+              <legend class="sr-only">Δοκιμαστικό αίτημα ραντεβού</legend>
+              <div class="form-title">
+                <h3>Αίτημα ραντεβού</h3>
+                <span class="preview-badge">Δοκιμαστική φόρμα</span>
+              </div>
+              <p class="demo-notice" id="demo-notice">
+                Προεπισκόπηση για παρουσίαση. Τα στοιχεία δεν αποστέλλονται και
+                δεν γίνεται κράτηση.
+              </p>
+              <fieldset>
+                <legend>Εσείς &amp; ο μικρός σας φίλος</legend>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="owner-name"
+                      >Το όνομά σας <span aria-hidden="true">*</span></label
+                    ><input
+                      id="owner-name"
+                      name="owner_name"
+                      autocomplete="name"
+                      required
+                      maxlength="80"
+                      aria-describedby="owner-name-error"
+                    /><span id="owner-name-error" class="field-error"></span>
+                  </div>
+                  <div class="field">
+                    <label for="phone"
+                      >Τηλέφωνο <span aria-hidden="true">*</span></label
+                    ><input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      inputmode="tel"
+                      autocomplete="tel"
+                      required
+                      maxlength="25"
+                      aria-describedby="phone-error"
+                    /><span id="phone-error" class="field-error"></span>
+                  </div>
+                  <div class="field">
+                    <label for="pet-type"
+                      >Κατοικίδιο <span aria-hidden="true">*</span></label
+                    ><select
+                      id="pet-type"
+                      name="animal"
+                      required
+                      aria-describedby="pet-type-error"
+                    >
+                      <option value="dog">Σκύλος</option>
+                      <option value="cat">Γάτα</option></select
+                    ><span id="pet-type-error" class="field-error"></span>
+                  </div>
+                  <div class="field">
+                    <label for="service"
+                      >Επιθυμητή φροντίδα
+                      <span aria-hidden="true">*</span></label
+                    ><select
+                      id="service"
+                      name="service"
+                      required
+                      aria-describedby="service-error"
+                    ></select
+                    ><span id="service-error" class="field-error"></span>
+                  </div>
+                </div>
+              </fieldset>
+              <details class="pet-details">
+                <summary>
+                  Λίγα ακόμη για το κατοικίδιό σας <span>προαιρετικά</span>
+                </summary>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="pet-name">Όνομα κατοικιδίου</label
+                    ><input
+                      id="pet-name"
+                      name="pet_name"
+                      maxlength="80"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="pet-breed">Φυλή</label
+                    ><input
+                      id="pet-breed"
+                      name="breed"
+                      list="dog-breeds"
+                      maxlength="80"
+                      autocomplete="off"
+                      placeholder="π.χ. Ημίαιμο…"
+                    />
+                  </div>
+                  <div class="field" id="pet-size-field">
+                    <label for="pet-size">Μέγεθος</label
+                    ><select id="pet-size" name="size">
+                      <option value="unknown">Δεν γνωρίζω</option>
+                      <option value="small">Μικρόσωμος</option>
+                      <option value="medium">Μεσαίος</option>
+                      <option value="large">Μεγαλόσωμος</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="pet-coat">Τρίχωμα</label
+                    ><select id="pet-coat" name="coat">
+                      <option value="unknown">Δεν γνωρίζω</option>
+                      <option value="short">Κοντό</option>
+                      <option value="long">Μακρύ</option>
+                      <option value="curly">Σγουρό</option>
+                    </select>
+                  </div>
+                </div>
+              </details>
+              <fieldset>
+                <legend>Πότε σας εξυπηρετεί;</legend>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="preferred-date"
+                      >Προτιμώμενη ημέρα <span>(προαιρετικά)</span></label
+                    ><input
+                      id="preferred-date"
+                      name="preferred_date"
+                      type="date"
+                      aria-describedby="preferred-date-error"
+                    /><span
+                      id="preferred-date-error"
+                      class="field-error"
+                    ></span>
+                  </div>
+                  <div class="field">
+                    <label for="preferred-time">Προτίμηση ώρας</label
+                    ><select id="preferred-time" name="preferred_time">
+                      <option value="any">Δεν έχω προτίμηση</option>
+                      <option value="morning">Πρωί</option>
+                      <option value="afternoon">Απόγευμα</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="field">
+                <label for="message"
+                  >Θέλετε να μας πείτε κάτι ακόμη;
+                  <span>(προαιρετικά)</span></label
+                ><textarea
+                  id="message"
+                  name="message"
+                  rows="3"
+                  maxlength="1000"
+                  placeholder="Κάτι που θα θέλατε να γνωρίζουμε…"
+                ></textarea>
+              </div>
+              <p class="required-note">* Υποχρεωτικά πεδία</p>
+              <button
+                class="button button-primary form-submit"
+                type="submit"
+                aria-describedby="demo-notice"
+              >
+                Προεπισκόπηση αιτήματος<svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg>
+              </button>
+              <div
+                id="form-result"
+                class="form-result"
+                role="status"
+                tabindex="-1"
+                hidden
+              >
+                <h4>Το δοκιμαστικό σας αίτημα είναι έτοιμο.</h4>
+                <p id="request-summary"></p>
+                <p>
+                  <strong>Δεν έχει αποσταλεί.</strong> Η φόρμα λειτουργεί μόνο
+                  ως δείγμα για την παρουσίαση.
+                </p>
+                <button type="button" class="text-link" id="clear-request">
+                  Καθαρισμός στοιχείων
+                </button>
+              </div>
+            </fieldset>
+            <noscript
+              ><p>
+                Η δοκιμαστική φόρμα χρειάζεται JavaScript. Δεν πραγματοποιεί
+                αποστολή.
+              </p></noscript
+            >
+          </form>
+        </div>
+      </section>
+
+      <section
+        id="visit"
+        class="location-section"
+        aria-labelledby="visit-title"
+      >
+        <div class="container location-layout">
+          <div>
+            <p class="eyebrow">Τα λέμε στην Παλλήνη</p>
+            <h2 id="visit-title">
+              Το atelier<br />στη γειτονιά σας<span class="coral-line"></span>
+            </h2>
+            <address>Πατριάρχου Γρηγορίου Εʹ 3,<br />Παλλήνη 153 51</address>
+          </div>
+          <a
+            class="map-link"
+            href="https://www.google.com/maps?cid=6950563779669836147"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><svg class="map-pin" aria-hidden="true"><use href="#i-pin" /></svg
+            ><span class="handwritten">Γνωρίστε μας <br />από κοντά.</span
+            ><span class="map-link-label"
+              >Άνοιγμα στο Google Maps<svg class="icon" aria-hidden="true">
+                <use href="#i-arrow" /></svg></span
+          ></a>
+          <div class="location-note">
+            <svg class="icon" aria-hidden="true"><use href="#i-paw" /></svg>
+            <p class="handwritten">
+              Τα μικρά πράγματα<br />κάνουν μεγάλη διαφορά.
+            </p>
+            <svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <a href="#home" class="footer-brand" translate="no">Le Petit Atelier</a>
+        <p>Φροντίδα με αγάπη. Στυλ με χαρακτήρα.</p>
+        <a
+          href="https://www.instagram.com/le_petit_atelier_pallini/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Instagram ↗</a
+        ><a href="#appointment">Επικοινωνία</a>
+      </div>
+      <div class="container preview-footer">
+        Πρόταση σχεδιασμού · Δοκιμαστική ιστοσελίδα · Η φόρμα δεν αποστέλλει
+        στοιχεία.
+      </div>
+    </footer>
+    <datalist id="dog-breeds">
+      <option value="Ημίαιμο"></option>
+      <option value="Δεν γνωρίζω"></option>
+      <option value="Maltese"></option>
+      <option value="Poodle / Κανίς"></option>
+      <option value="Shih Tzu"></option>
+      <option value="Yorkshire Terrier"></option>
+      <option value="Pomeranian"></option>
+      <option value="Golden Retriever"></option>
+      <option value="Labrador"></option>
+      <option value="Cocker Spaniel"></option>
+      <option value="Husky"></option>
+    </datalist>
+    <datalist id="cat-breeds">
+      <option value="Ημίαιμη"></option>
+      <option value="Δεν γνωρίζω"></option>
+      <option value="Ευρωπαϊκή κοντότριχη"></option>
+      <option value="Περσική"></option>
+      <option value="Maine Coon"></option>
+      <option value="British Shorthair"></option>
+      <option value="Ragdoll"></option>
+    </datalist>
+  </body>
+</html>

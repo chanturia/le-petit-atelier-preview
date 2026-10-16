@@ -124,6 +124,7 @@
         </button>
         <nav id="main-nav" aria-label="Κύρια πλοήγηση">
           <a href="#care">Φροντίδα</a>
+          <a href="work.html">Η δουλειά μας</a>
           <a href="#atelier">Το atelier</a>
           <a href="#appointment">Επικοινωνία</a>
         </nav>
@@ -398,82 +399,112 @@
               ></a>
             </div>
           </div>
-          <div class="gallery-toolbar">
-            <p class="handwritten">
-              Οι μικροί μας επισκέπτες
-              <svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>
-            </p>
-            <div
-              class="filter-buttons"
-              role="group"
-              aria-label="Φίλτρο φωτογραφιών"
-            >
-              <button
-                type="button"
-                data-gallery-filter="all"
-                aria-pressed="true"
-              >
-                Όλοι</button
-              ><button
-                type="button"
-                data-gallery-filter="dog"
-                aria-pressed="false"
-              >
-                Σκύλοι</button
-              ><button
-                type="button"
-                data-gallery-filter="cat"
-                aria-pressed="false"
-              >
-                Γάτες
-              </button>
-            </div>
+          <div class="work-preview-heading">
+            <h3>Η φροντίδα, στην πράξη.</h3>
+            <a class="text-link" href="work.html"
+              >Όλες οι περιποιήσεις
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg
+            ></a>
           </div>
-          <div class="gallery">
-            <figure class="gallery-item" data-animal="dog">
-              <img
-                src="assets/images/dog-bow.jpg"
-                width="480"
-                height="640"
-                alt="Λευκό σκυλάκι με πολύχρωμο παπιγιόν μετά το grooming"
-                loading="lazy"
-              />
-              <figcaption>Έτοιμος για βόλτα!</figcaption>
-            </figure>
-            <figure class="gallery-item" data-animal="cat">
-              <img
-                src="assets/images/cat.jpg"
-                width="480"
-                height="640"
-                alt="Η γάτα της παρέας στο τραπέζι περιποίησης"
-                loading="lazy"
-              />
-              <figcaption>Με τον δικό μου αέρα.</figcaption>
-            </figure>
-            <figure class="gallery-item" data-animal="dog">
-              <img
-                src="assets/images/dog-blue-eyes.jpg"
-                width="480"
-                height="640"
-                alt="Σκύλος με γαλάζια μάτια ξεκουράζεται στο atelier"
-                loading="lazy"
-              />
-              <figcaption>Ένα βλέμμα αρκεί.</figcaption>
-            </figure>
-            <figure class="gallery-item" data-animal="dog">
-              <img
-                src="assets/images/dog-white.jpg"
-                width="360"
-                height="640"
-                alt="Χαμογελαστό μικρό λευκό σκυλάκι με ροζ περιλαίμιο"
-                loading="lazy"
-              />
-              <figcaption>Μικρός, με πολύ στυλ.</figcaption>
-            </figure>
+          <div class="work-preview-grid">
+            <article class="work-preview">
+              <a
+                href="work.html#curly-look"
+                class="work-preview-photo"
+                aria-label="Δείτε την αλλαγή στο σγουρό τρίχωμα"
+              >
+                <div class="preview-pair">
+                  <figure>
+                    <img
+                      src="assets/images/curly-before.jpg"
+                      width="443"
+                      height="590"
+                      alt="Σγουρό καφέ σκυλάκι πριν το κούρεμα"
+                      loading="lazy"
+                    />
+                    <figcaption>Πριν</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="assets/images/curly-after.jpg"
+                      width="443"
+                      height="590"
+                      alt="Το νέο κούρεμα με κοντύτερο τρίχωμα και στρογγυλεμένο πρόσωπο"
+                      loading="lazy"
+                    />
+                    <figcaption>Μετά</figcaption>
+                  </figure>
+                </div>
+              </a>
+              <div class="work-preview-copy">
+                <p class="work-category">Σκύλος · Κούρεμα &amp; στυλ</p>
+                <h4>
+                  <a href="work.html#curly-look"
+                    >Μια μικρή αλλαγή. Πολύς χαρακτήρας.</a
+                  >
+                </h4>
+                <p>
+                  Από το μακρύ σγουρό τρίχωμα σε ένα νέο, περιποιημένο look.
+                </p>
+                <a class="text-link" href="work.html#curly-look"
+                  >Δείτε το πριν &amp; μετά <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="work-preview">
+              <a
+                href="work.html#short-coat"
+                class="work-preview-photo"
+                aria-label="Δείτε την περιποίηση κοντού τριχώματος"
+                ><img
+                  src="assets/images/short-coat-result.jpg"
+                  width="1600"
+                  height="2133"
+                  alt="Καφέ κοντότριχος σκύλος με ροζ μπαντάνα στο atelier"
+                  loading="lazy"
+              /></a>
+              <div class="work-preview-copy">
+                <p class="work-category">Σκύλος · Φροντίδα τριχώματος</p>
+                <h4>
+                  <a href="work.html#short-coat"
+                    >Η φροντίδα στις λεπτομέρειες.</a
+                  >
+                </h4>
+                <p>
+                  Κοντό τρίχωμα, ένα εκφραστικό βλέμμα και η τελευταία πινελιά.
+                </p>
+                <a class="text-link" href="work.html#short-coat"
+                  >Δείτε την περιποίηση <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="work-preview">
+              <a
+                href="work.html#cat-portrait"
+                class="work-preview-photo"
+                aria-label="Δείτε τη γάτα στο atelier"
+                ><img
+                  src="assets/images/cat.jpg"
+                  width="480"
+                  height="640"
+                  alt="Λευκή και καφέ γάτα στο τραπέζι περιποίησης"
+                  loading="lazy"
+              /></a>
+              <div class="work-preview-copy">
+                <p class="work-category">Γάτα · Στιγμές στο atelier</p>
+                <h4>
+                  <a href="work.html#cat-portrait">Με τον δικό της αέρα.</a>
+                </h4>
+                <p>
+                  Μια στάση στον φακό για έναν επισκέπτη με ξεχωριστή
+                  προσωπικότητα.
+                </p>
+                <a class="text-link" href="work.html#cat-portrait"
+                  >Δείτε τη φωτογραφία <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
           </div>
-          <p id="gallery-status" class="sr-only" aria-live="polite">
-            4 φωτογραφίες
-          </p>
         </div>
       </section>
 
@@ -746,6 +777,7 @@
           target="_blank"
           rel="noopener noreferrer"
           >Instagram ↗</a
+        ><a href="work.html">Η δουλειά μας</a
         ><a href="#appointment">Επικοινωνία</a>
       </div>
       <div class="container preview-footer">

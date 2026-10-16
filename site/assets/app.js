@@ -1,3 +1,4 @@
+import "./navigation.js";
 import {
   animals,
   coats,
@@ -10,37 +11,9 @@ import {
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 const form = $("#appointment-form");
-const menu = $("#main-nav");
-const menuToggle = $(".menu-toggle");
 const careForm = $("#care-selector");
 const serviceList = $("#service-list");
 const params = new URLSearchParams(location.search);
-
-function closeMenu() {
-  menu.classList.remove("is-open");
-  menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Άνοιγμα μενού");
-}
-menuToggle.addEventListener("click", () => {
-  const open = menu.classList.toggle("is-open");
-  menuToggle.setAttribute("aria-expanded", String(open));
-  menuToggle.setAttribute(
-    "aria-label",
-    open ? "Κλείσιμο μενού" : "Άνοιγμα μενού",
-  );
-});
-menu.addEventListener("click", (event) => {
-  if (event.target.closest("a")) closeMenu();
-});
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && menu.classList.contains("is-open")) {
-    closeMenu();
-    menuToggle.focus();
-  }
-});
-document.addEventListener("click", (event) => {
-  if (!event.target.closest(".site-header")) closeMenu();
-});
 
 function updateQuery(key, value, defaultValue) {
   const url = new URL(location.href);
@@ -137,33 +110,6 @@ $("#pet-type").addEventListener("change", () => {
 });
 $("#pet-coat").addEventListener("change", renderFormServices);
 renderFormServices();
-
-function filterGallery(filter) {
-  $$("[data-gallery-filter]").forEach((button) =>
-    button.setAttribute(
-      "aria-pressed",
-      String(button.dataset.galleryFilter === filter),
-    ),
-  );
-  let visible = 0;
-  $$(".gallery-item").forEach((item) => {
-    item.hidden = filter !== "all" && item.dataset.animal !== filter;
-    if (!item.hidden) visible++;
-  });
-  $("#gallery-status").textContent =
-    `${visible} ${visible === 1 ? "φωτογραφία" : "φωτογραφίες"}`;
-  updateQuery("gallery", filter, "all");
-}
-$$("[data-gallery-filter]").forEach((button) =>
-  button.addEventListener("click", () =>
-    filterGallery(button.dataset.galleryFilter),
-  ),
-);
-filterGallery(
-  ["dog", "cat"].includes(params.get("gallery"))
-    ? params.get("gallery")
-    : "all",
-);
 
 const dateInput = $("#preferred-date");
 dateInput.min = athensDate();

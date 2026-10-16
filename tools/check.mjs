@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile, access } from "node:fs/promises";
+import { readFile, access, readdir } from "node:fs/promises";
 import {
   servicesFor,
   validPhone,
@@ -24,22 +24,38 @@ assert.equal(athensDate(new Date("2026-01-16T21:30:00Z")), "2026-01-16");
 
 const site = new URL("../site/", import.meta.url);
 const html = await readFile(new URL("index.html", site), "utf8");
-const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
-assert.equal(ids.length, new Set(ids).size, "Duplicate HTML IDs");
-for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
-  const value = match[1];
-  if (value.startsWith("#"))
-    assert(ids.includes(value.slice(1)), `Missing anchor: ${value}`);
-  else if (!/^[a-z]+:/i.test(value)) await access(new URL(value, site));
-}
-for (const match of html.matchAll(/<img\b([^>]+)>/g)) {
-  assert(/\balt=/.test(match[1]), "Image missing alt");
+for (const page of (await readdir(site)).filter((file) =>
+  file.endsWith(".html"),
+)) {
+  const source = new URL(page, site);
+  const content = await readFile(source, "utf8");
+  const ids = [...content.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+  assert.equal(ids.length, new Set(ids).size, `Duplicate IDs in ${page}`);
+  for (const match of content.matchAll(/(?:href|src)="([^"]+)"/g)) {
+    const value = match[1].replaceAll("&amp;", "&");
+    if (/^[a-z]+:/i.test(value)) continue;
+    const target = new URL(value, source);
+    await access(target);
+    if (target.hash) {
+      const targetHtml = await readFile(target, "utf8");
+      assert(
+        targetHtml.includes(`id="${target.hash.slice(1)}"`),
+        `Missing anchor ${page} -> ${value}`,
+      );
+    }
+  }
+  for (const match of content.matchAll(/<img\b([^>]+)>/g)) {
+    assert(/\balt=/.test(match[1]), `Image missing alt in ${page}`);
+    assert(
+      /\bwidth=/.test(match[1]) && /\bheight=/.test(match[1]),
+      `Image dimensions missing in ${page}`,
+    );
+  }
   assert(
-    /\bwidth=/.test(match[1]) && /\bheight=/.test(match[1]),
-    "Image dimensions missing",
+    content.includes("noindex, nofollow"),
+    `Preview must not be indexed: ${page}`,
   );
 }
-assert(html.includes("noindex, nofollow"), "Preview must not be indexed");
 assert(
   /id="demo-fields"[^>]*disabled/.test(html),
   "No-JS form must be disabled",
